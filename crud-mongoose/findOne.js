@@ -4,7 +4,7 @@ const user = require("../models/Users");
 
 //listando un producto
 const getUser = async () => {
-  const query = await Productos.findOne();
+  const query = await user.findOne({apodo:'alejandra'});
   console.log(query);
 };
 

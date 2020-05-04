@@ -3,14 +3,17 @@ const Usuario = require("./models/Users");
 
 const createdUser = async () => {
   const userOne = new Usuario({
-    nombre: "Joe con NIckname corregido",
-    edad:20,
-    password:'111', 
-    nickname:'mongo', //unico
+    nombre: "maria",
+    edad:22,
+    password:'123455', 
+    nickname:'san', //unico
   });
 
-   await userOne.save()
+   const nuevo= await userOne.save()
+   return nuevo
 };
 
 const Main = createdUser();
-Main;
+Main
+  .then(nuevo=>console.log(nuevo))
+  .catch(e=>console.log(e))

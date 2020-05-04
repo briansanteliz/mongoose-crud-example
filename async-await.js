@@ -12,12 +12,14 @@ const main = async () => {
     });
     //creo el producto y lo guardo en una constante.
     const productSave = await newProduct.save();
-     return productSave //retorno el producto y se lo envió a la promesa.
+       return productSave //retorno el producto y se lo envió a la promesa.
   } catch (e) {
     throw new Error(e);
   }
 };
 const Main = main();
 Main
-    .then(productSave=>console.log(productSave))
-    .catch(error=>console.log(error));
+        .then(productSave=>console.log(productSave))
+        .catch(e=>console.log(e))
+    // .then(productSave=>console.log(productSave))
+    // .catch(error=>console.log(error));

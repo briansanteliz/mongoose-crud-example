@@ -4,7 +4,7 @@ const Productos = require("../models/Products");
 
 //listando todos los productos.
 const main = async() =>{
-    const query = await Productos.find();
+    const query = await Productos.find({descripcion:'Consola VIdeojuego'});
     console.log(query)
 }
 
